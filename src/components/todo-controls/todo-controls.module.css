@@ -1,0 +1,7 @@
+.controlsWrapper {
+	min-width: 100%;
+	position: relative;
+	align-self: baseline;
+	display: flex;
+	align-items: center;
+}

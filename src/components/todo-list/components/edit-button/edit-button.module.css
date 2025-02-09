@@ -1,0 +1,43 @@
+.btn {
+	height: 100%;
+	aspect-ratio: 1;
+	border: 0;
+	color: #776a5e;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	position: absolute;
+	right: 0;
+	background: no-repeat center;
+	background-size: contain;
+}
+
+.editBtn {
+	background-image: url('/public/icons/edit_task.svg');
+	right: 9%;
+}
+
+.confirmEditBtn {
+	background-image: url('/public/icons/confirm_edit_task.svg');
+	right: 9%;
+}
+
+.btn:disabled {
+	cursor: not-allowed;
+	background-color: #f2f2f2;
+	opacity: 0.3;
+}
+
+.btn:hover,
+.btn:active {
+	background-color: #fcd9b87e;
+}
+
+.deleteBtn:hover,
+.deleteBtn:active {
+	background-color: #f7654fae;
+}
+
+.confirmEditBtn:hover {
+	background-color: #a3de4b82;
+}

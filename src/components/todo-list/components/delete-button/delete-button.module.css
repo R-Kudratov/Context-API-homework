@@ -1,0 +1,33 @@
+.btn {
+	height: 100%;
+	aspect-ratio: 1;
+	border: 0;
+	color: #776a5e;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	position: absolute;
+	right: 0;
+	background: no-repeat center;
+	background-size: contain;
+}
+
+.btn:disabled {
+	cursor: not-allowed;
+	background-color: #f2f2f2;
+	opacity: 0.3;
+}
+
+.btn:hover,
+.btn:active {
+	background-color: #fcd9b87e;
+}
+
+.deleteBtn {
+	background-image: url('/public/icons/remove_task.svg');
+}
+
+.deleteBtn:hover,
+.deleteBtn:active {
+	background-color: #f7654fae;
+}
