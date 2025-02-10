@@ -2,12 +2,7 @@ import { useState } from 'react'
 
 import { TodoAppContext } from './context'
 
-import {
-	useRequestPostTodo,
-	useRequestDeleteTodo,
-	useRequestEditTodo,
-	useRequestGetTodos,
-} from '../API'
+import { useRequestGetTodos } from '../API'
 
 export const TodoAppProvider = ({ children }) => {
 	const [inputValue, setInputValue] = useState('')
@@ -19,9 +14,6 @@ export const TodoAppProvider = ({ children }) => {
 	const [refreshFlag, setRefreshFlag] = useState(false)
 
 	const { todoList, isLoading } = useRequestGetTodos(refreshFlag, isSorted)
-	const { postTodo } = useRequestPostTodo(refreshFlag, setRefreshFlag)
-	const { deleteTodo } = useRequestDeleteTodo(refreshFlag, setRefreshFlag)
-	const { editTodo } = useRequestEditTodo(refreshFlag, setRefreshFlag)
 
 	return (
 		<TodoAppContext
@@ -42,9 +34,6 @@ export const TodoAppProvider = ({ children }) => {
 				setRefreshFlag,
 				todoList,
 				isLoading,
-				postTodo,
-				deleteTodo,
-				editTodo,
 			}}
 		>
 			{children}

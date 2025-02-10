@@ -1,12 +1,19 @@
 import { use } from 'react'
 import { TodoAppContext } from '../../../../context/context'
 import { handleSubmit, handleInput } from '../../../../utils/utils'
+import { useRequestPostTodo } from '../../../../API/use-request-post-todo.js'
 
 import styles from './input-form.module.css'
 
 export const InputForm = () => {
-	const { inputValue, setInputValue, setIsSearching, postTodo } =
-		use(TodoAppContext)
+	const {
+		inputValue,
+		setInputValue,
+		setIsSearching,
+		refreshFlag,
+		setRefreshFlag,
+	} = use(TodoAppContext)
+	const { postTodo } = useRequestPostTodo(refreshFlag, setRefreshFlag)
 
 	return (
 		<form
